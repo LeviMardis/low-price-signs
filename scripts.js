@@ -179,20 +179,45 @@ const buildOptions = () => {
     optRoot.appendChild(group);
     root.appendChild(optRoot);
   }
+  // ----- Create Quantity, Price, Price per unit, Add to cart
+  const divider = document.createElement("div");
+  divider.classList.add("line-divider");
+  root.appendChild(divider);
+  const qtyWrap = document.createElement("div");
+  qtyWrap.classList.add("qty-wrap");
+  const qtyTitle = document.createElement("div");
+  qtyTitle.classList.add("qty-title");
+  const qtyInput = document.createElement("input");
+  qtyInput.classList.add("qty-input");
+  qtyInput.setAttribute("id", "qty-input");
+  qtyWrap.appendChild(qtyTitle);
+  qtyWrap.appendChild(qtyInput);
+  root.appendChild(qtyWrap);
+  root.appendChild(divider);
+  // ----- Total
+  const total = document.createElement("p");
+  total.classList.add("total-price");
+  total.setAttribute("id", "total-price");
+  root.appendChild(total);
+  // ----- Total per item
+  const totalPer = document.createElement("p");
+  totalPer.classList.add("total-per-item");
+  totalPer.setAttribute("id", "total-per-item");
+  root.appendChild(totalPer);
+  // ----- Add to Cart
   const order = document.createElement("input");
+  order.classList.add("order-button");
   order.setAttribute("type", "submit");
   root.setAttribute("onsubmit", "return handleOrder();");
   root.appendChild(order);
-  // ----- Create Total Price -----
-  const total = document.createElement("p");
-  total.setAttribute("id", "total-price");
-  root.appendChild(total);
+
   query();
   let start = document.querySelector(".option-radio");
   start.classList.add("option-current");
   let startGroup = document.querySelector(".option-group");
   root.style.setProperty("--custom-height", startGroup.scrollHeight + "px");
 };
+
 const handleOrder = () => {
   let current = document.querySelector(".option-current");
   if (current) {
