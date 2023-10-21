@@ -1,0 +1,126 @@
+/* Colors */
+$gradient-lr: linear-gradient(90deg, #e67a0e 0%, #e6bf00 100%);
+$orange: #e67a0e;
+$yellow: #e6bf00;
+$error: #e6350e;
+$grey-1: #464644;
+$grey-2: #7f7f7e;
+$grey-3: #dbdbdb;
+$grey-4: #fafafa;
+$white: #ffffff;
+$step--1: clamp(0.9375rem, 0.9219rem + 0.0781vw, 1rem);
+$step-0: clamp(1.125rem, 1.0938rem + 0.1563vw, 1.25rem);
+$step-1: clamp(1.35rem, 1.2969rem + 0.2656vw, 1.5625rem);
+$step-2: clamp(1.62rem, 1.5367rem + 0.4164vw, 1.9531rem);
+$step-3: clamp(1.9438rem, 1.8194rem + 0.6219vw, 2.4413rem);
+$step-4: clamp(2.3325rem, 2.1527rem + 0.8992vw, 3.0519rem);
+$step-5: clamp(2.7994rem, 2.5455rem + 1.2695vw, 3.815rem);
+
+/* Text */
+h1 {
+	font-family: var(--font-montserrat);
+	font-size: $step-5;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 130%; /* 55.9px */
+}
+h2 {
+	font-family: var(--font-montserrat);
+	font-size: $step-4;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%; /* 44.2px */
+}
+h3 {
+	font-family: var(--font-montserrat);
+	font-size: $step-3;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 130%; /* 35.1px */
+	letter-spacing: 1.35px;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: var(--font-montserrat);
+	font-size: $step-2;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%; /* 28.6px */
+}
+h5 {
+	font-family: var(--font-montserrat);
+	font-size: $step-1;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%; /* 23.4px */
+	letter-spacing: 1.44px;
+	text-transform: uppercase;
+}
+h6 {
+	font-family: var(--font-montserrat);
+	font-size: $step--1;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 130%; /* 14.3px */
+}
+body {
+	font-size: $step-0;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 21px */
+}
+.bold {
+	font-weight: 700;
+}
+
+/* Button */
+@mixin button-color($main: $grey-1, $text: $white, $text-2: $grey-1) {
+	border: 2px solid $main;
+	background-color: $main;
+	color: $text;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0);
+		color: $text-2;
+	}
+	&.outline {
+		background-color: rgba(0, 0, 0, 0);
+		color: $text-2;
+		&:hover {
+			background-color: $main;
+			color: $text;
+		}
+	}
+}
+.button {
+	display: inline-flex;
+	padding: 21px 46px;
+	border-radius: 8px;
+	font-family: var(--font-montserrat);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%; /* 23.4px */
+	letter-spacing: 1.44px;
+	text-transform: uppercase;
+	text-decoration: none;
+	&.orange {
+		@include button-color($orange);
+	}
+	&.white {
+		@include button-color($white, $grey-1);
+	}
+	&.grey {
+		@include button-color($grey-2, $white, $grey-2);
+	}
+	&.yellow {
+		@include button-color($yellow);
+	}
+	&.dark-grey {
+		@include button-color($grey-1);
+	}
+	&.small {
+		padding: 11px 26px;
+		font-size: 14px;
+		letter-spacing: 0.84px;
+	}
+}
