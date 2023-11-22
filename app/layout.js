@@ -1,6 +1,9 @@
 import Nav from "./components/ui/Nav";
 import "./globals.scss";
 import { Mukta, Montserrat } from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const mukta = Mukta({ subsets: ["latin"], weight: ["400", "700"] });
 const montserrat = Montserrat({ weight: ["800", "700", "600", "400"], subsets: ["latin"], variable: "--font-montserrat" });

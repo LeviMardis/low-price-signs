@@ -1,13 +1,97 @@
-.logo {
-	position: relative;
-	max-height: 50px;
+.navWrap {
 }
-.logoLink {
-	position: relative;
-	display: block;
+.notificationBannerWrap {
+	background: $grey-4;
 }
-.logoWrap {
-	width: 20%;
+.notificationBanner {
+	height: 38px;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 14px;
+}
+.navContentWrap {
+	max-width: $max-width;
+	padding: 20px $h-padding;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+}
+.searchWrap {
+	position: relative;
+	flex-grow: 1;
+	margin: 0 5%;
+}
+.searchInput {
+	@include caps;
+	border: $grey-3 solid 1px;
+	padding: 13px 10px 13px 50px;
+	border-radius: $border-radius;
+	color: $grey-1;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: transparent;
+	&:focus-visible {
+		outline-color: $orange;
+	}
+	&:placeholder {
+		color: $grey-2;
+	}
+}
+.searchIcon {
+	position: absolute;
+	top: 11px;
+	left: 20px;
+	z-index: -1;
+	color: $grey-2;
+}
+.cartButton {
+	display: inline-flex;
+	background: $gradient-lr;
+	color: white;
+	padding: 20px 44px 20px 36px;
+	border-radius: $border-radius;
+	font-family: var(--font-montserrat);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 80%;
+	letter-spacing: 1.44px;
+	position: relative;
+}
+.cartIcon {
+	position: absolute;
+	top: 18px;
+	left: 20px;
+}
+.cartCounter {
+	position: relative;
+	background-color: white;
+	color: $orange;
+	border-radius: 10px;
+	padding: 3px;
+	font-size: 10px;
+	min-width: 10px;
+	min-height: 10px;
+	line-height: 100%;
+	border: 1px solid $orange;
+	top: -10px;
+	margin-right: 10px;
+	z-index: 1;
+}
+.cartButtonOverlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.navLinksWrap {
+	background-color: $grey-4;
+}
+.navLinks {
+	max-width: $max-width;
+	padding: 0 $h-padding;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
 }

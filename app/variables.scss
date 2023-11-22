@@ -1,0 +1,31 @@
+/* Colors */
+$gradient-lr: linear-gradient(90deg, #e67a0e 0%, #e6bf00 100%);
+$orange: #e67a0e;
+$yellow: #e6bf00;
+$error: #e6350e;
+$grey-1: #464644;
+$grey-2: #7f7f7e;
+$grey-3: #dbdbdb;
+$grey-4: #fafafa;
+$white: #ffffff;
+
+/* Font */
+$step--1: clamp(0.9375rem, 0.9219rem + 0.0781vw, 1rem);
+$step-0: clamp(1.125rem, 1.0938rem + 0.1563vw, 1.25rem);
+$step-1: clamp(1.35rem, 1.2969rem + 0.2656vw, 1.5625rem);
+$step-2: clamp(1.62rem, 1.5367rem + 0.4164vw, 1.9531rem);
+$step-3: clamp(1.9438rem, 1.8194rem + 0.6219vw, 2.4413rem);
+$step-4: clamp(2.3325rem, 2.1527rem + 0.8992vw, 3.0519rem);
+$step-5: clamp(2.7994rem, 2.5455rem + 1.2695vw, 3.815rem);
+
+@mixin caps {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* Spacing */
+$max-width: 1440px;
+$h-padding: 10%;
+
+/* Other */
+$border-radius: 8px;

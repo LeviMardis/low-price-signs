@@ -9,10 +9,18 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-pro": "^6.4.2",
+		"@fortawesome/fontawesome-svg-core": "^6.4.2",
+		"@fortawesome/pro-light-svg-icons": "^6.4.2",
+		"@fortawesome/pro-solid-svg-icons": "^6.4.2",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@stripe/stripe-js": "^2.2.0",
 		"next": "^14.0.3",
+		"qs": "^6.11.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"sass": "^1.69.5"
+		"sass": "^1.69.5",
+		"stripe": "^14.5.0"
 	},
 	"devDependencies": {
 		"eslint": "^8",

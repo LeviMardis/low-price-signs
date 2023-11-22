@@ -1,0 +1,30 @@
+.megaMenuWrap {
+	&:hover {
+		background-color: $grey-3;
+		.menuWrap {
+			display: block;
+		}
+	}
+}
+.linkWrap {
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 14.5px 36px;
+}
+.menuWrap {
+	display: none;
+	padding: 36px 96px;
+	position: absolute;
+	top: 60px;
+	width: 80%;
+	left: $h-padding;
+	box-sizing: border-box;
+	background-color: white;
+}
+.menuContent {
+	display: flex;
+	flex-flow: column wrap;
+	max-height: 500px;
+}
+.subCategoryWrap {
+}
