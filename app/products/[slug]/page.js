@@ -10,10 +10,10 @@ const fetchProduct = async (slug) => {
 	return res.json();
 };
 
-const page = async ({ params }) => {
+const Page = async ({ params }) => {
 	const product = await fetchProduct(params.slug);
 
 	return <div>Hello world {product.data[0].attributes.slug}</div>;
 };
 
-export default page;
+export default Page;

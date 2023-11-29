@@ -2,25 +2,24 @@ import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-const handler = async (req, res) => {
-	switch (req.method) {
-		case "POST":
-			const { data } = await req.json();
-			const { amount } = data;
-			try {
-				const paymentIntent = await stripe.paymentIntents.create({
-					amount: Number(amount) * 100,
-					currency: "USD",
-				});
+const calculateTotal = (items) => {
+	return 1200;
+};
 
-				return Response(paymentIntent.client_secret, { status: 200 });
-			} catch (error) {
-				return Response(error, {
-					status: 400,
-				});
-			}
-		case "GET":
+const POST = async (req, res) => {
+	const { data } = await req.json();
+	try {
+		const paymentIntent = await stripe.paymentIntents.create({
+			amount: calculateTotal(),
+			currency: "USD",
+		});
+
+		return Response.json({ clientSecret: paymentIntent.client_secret }, { status: 200 });
+	} catch (error) {
+		return Response.json(error, {
+			status: 400,
+		});
 	}
 };
 
-export default handler;
+export { POST };

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
 
-const page = () => {
+const Page = () => {
 	return (
 		<>
 			<Link href={"/"}>Home</Link>
@@ -10,4 +10,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
